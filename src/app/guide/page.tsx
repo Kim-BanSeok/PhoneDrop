@@ -132,7 +132,7 @@ export default function GuidePage() {
               사용 중 문제가 있거나 궁금한 점이 있으시면 FAQ 페이지나 사용 가이드를 참고해 주세요.
             </p>
             <div className="bg-slate-50 p-4 rounded-lg">
-              <p className="text-slate-700">홈페이지: https://phonedrop.app</p>
+              <p className="text-slate-700">홈페이지: https://phone-drop.vercel.app</p>
             </div>
           </section>
         </div>

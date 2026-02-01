@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
               개인정보처리방침과 관련된 문의사항은 다음 연락처로 문의해 주시기 바랍니다:
             </p>
             <div className="bg-slate-50 p-4 rounded-lg">
-              <p className="text-slate-700">홈페이지: https://phonedrop.app</p>
+              <p className="text-slate-700">홈페이지: https://phone-drop.vercel.app</p>
             </div>
           </section>
 
