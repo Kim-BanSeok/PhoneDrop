@@ -51,7 +51,7 @@ export default function Footer() {
               <li><a className="hover:text-white transition-colors" href="/guide">사용 방법</a></li>
               <li><a className="hover:text-white transition-colors" href="/faq">자주 묻는 질문</a></li>
               <li><a className="hover:text-white transition-colors" href="/contact">문의하기</a></li>
-              <li><a className="hover:text-white transition-colors" href="https://github.com/Kim-BanSeok/PhoneDrop/releases" target="_blank" rel="noopener noreferrer">업데이트 소식</a></li>
+              <li><a className="hover:text-white transition-colors" href="/news">업데이트 소식</a></li>
             </ul>
           </div>
 
