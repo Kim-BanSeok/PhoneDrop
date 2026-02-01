@@ -63,7 +63,7 @@ export default function FAQPage() {
           <div className="border-b border-slate-200 pb-8">
             <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 중복된 연락처는 어떻게 처리하나요?</h3>
             <p className="text-slate-600 leading-relaxed">
-              A: 관리 탭의 '중복 처리' 기능을 통해 동일한 전화번호나 이름의 연락처를 
+              A: 관리 탭의 &apos;중복 처리&apos; 기능을 통해 동일한 전화번호나 이름의 연락처를 
               자동으로 감지하고 병합하거나 삭제할 수 있습니다.
             </p>
           </div>

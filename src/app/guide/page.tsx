@@ -27,17 +27,17 @@ export default function GuidePage() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-3">1. 스마트 입력 (AI 자동 인식)</h3>
                 <ol className="list-decimal pl-6 text-blue-800 space-y-2">
-                  <li>입력 탭에서 "🤖 PhoneDrop 스마트 입력기" 섹션으로 이동</li>
+                  <li>입력 탭에서 &quot;🤖 PhoneDrop 스마트 입력기&quot; 섹션으로 이동</li>
                   <li>텍스트 입력란에 연락처 정보 붙여넣기 (엑셀, 카톡, 이메일 등)</li>
                   <li>AI가 자동으로 이름, 전화번호, 이메일 등을 분리</li>
-                  <li>인식 결과 확인 후 "연락처 추가" 버튼 클릭</li>
+                  <li>인식 결과 확인 후 &quot;연락처 추가&quot; 버튼 클릭</li>
                 </ol>
               </div>
 
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-3">2. 대량 업로드 (CSV/Excel)</h3>
                 <ol className="list-decimal pl-6 text-green-800 space-y-2">
-                  <li>"대량 연락처 업로드" 섹션에서 템플릿 다운로드</li>
+                  <li>&quot;대량 연락처 업로드&quot; 섹션에서 템플릿 다운로드</li>
                   <li>다운로드한 템플릿 파일에 연락처 정보 입력</li>
                   <li>파일 선택 버튼으로 업로드</li>
                   <li>변환된 연락처 확인 및 추가</li>
@@ -47,9 +47,9 @@ export default function GuidePage() {
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-3">3. 직접 입력</h3>
                 <ol className="list-decimal pl-6 text-purple-800 space-y-2">
-                  <li>"직접 입력" 섹션에서 폼에 정보 입력</li>
+                  <li>&quot;직접 입력&quot; 섹션에서 폼에 정보 입력</li>
                   <li>이름, 전화번호는 필수, 나머지는 선택</li>
-                  <li>"연락처 추가" 버튼으로 목록에 추가</li>
+                  <li>&quot;연락처 추가&quot; 버튼으로 목록에 추가</li>
                   <li>여러 연락처를 계속 입력 가능</li>
                 </ol>
               </div>

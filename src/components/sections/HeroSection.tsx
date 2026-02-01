@@ -86,7 +86,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                   <div className="space-y-3 text-gray-700 ml-11">
                     <div className="flex gap-2">
                       <span className="font-bold text-blue-600 min-w-[20px]">①</span>
-                      <p><strong>입력 탭</strong> → <strong>"🤖 PhoneDrop 스마트 입력기"</strong> 섹션으로 이동</p>
+                      <p><strong>입력 탭</strong> → <strong>&quot;🤖 PhoneDrop 스마트 입력기&quot;</strong> 섹션으로 이동</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-blue-600 min-w-[20px]">②</span>
@@ -106,11 +106,11 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-blue-600 min-w-[20px]">⑤</span>
-                      <p>인식 결과 확인 후 <strong>"연락처 추가"</strong> 버튼으로 목록에 추가</p>
+                      <p>인식 결과 확인 후 <strong>&quot;연락처 추가&quot;</strong> 버튼으로 목록에 추가</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-blue-600 min-w-[20px]">⑥</span>
-                      <p><strong>"vCard 다운로드"</strong> 또는 <strong>"QR 코드 다운로드"</strong> 버튼 클릭</p>
+                      <p><strong>&quot;vCard 다운로드&quot;</strong> 또는 <strong>&quot;QR 코드 다운로드&quot;</strong> 버튼 클릭</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-blue-600 min-w-[20px]">⑦</span>
@@ -128,11 +128,11 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                   <div className="space-y-3 text-gray-700 ml-11">
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">①</span>
-                      <p><strong>입력 탭</strong> → <strong>"대량 연락처 업로드"</strong> 섹션으로 이동</p>
+                      <p><strong>입력 탭</strong> → <strong>&quot;대량 연락처 업로드&quot;</strong> 섹션으로 이동</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">②</span>
-                      <p><strong>"템플릿 다운로드"</strong> 버튼 클릭 (CSV 또는 Excel 선택)</p>
+                      <p><strong>&quot;템플릿 다운로드&quot;</strong> 버튼 클릭 (CSV 또는 Excel 선택)</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">③</span>
@@ -152,7 +152,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">⑦</span>
-                      <p>작성 완료 후 파일 저장하고 <strong>"파일 선택"</strong> 버튼으로 업로드</p>
+                      <p>작성 완료 후 파일 저장하고 <strong>&quot;파일 선택&quot;</strong> 버튼으로 업로드</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">⑧</span>
@@ -160,7 +160,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-green-600 min-w-[20px]">⑨</span>
-                      <p>오류가 있으면 수정 후 <strong>"vCard 다운로드"</strong> 또는 <strong>"QR 코드 다운로드"</strong></p>
+                      <p>오류가 있으면 수정 후 <strong>&quot;vCard 다운로드&quot;</strong> 또는 <strong>&quot;QR 코드 다운로드&quot;</strong></p>
                     </div>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                   <div className="space-y-3 text-gray-700 ml-11">
                     <div className="flex gap-2">
                       <span className="font-bold text-purple-600 min-w-[20px]">①</span>
-                      <p><strong>입력 탭</strong> → <strong>"직접 입력"</strong> 섹션으로 이동</p>
+                      <p><strong>입력 탭</strong> → <strong>&quot;직접 입력&quot;</strong> 섹션으로 이동</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-purple-600 min-w-[20px]">②</span>
@@ -182,7 +182,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-purple-600 min-w-[20px]">③</span>
-                      <p>여러 연락처를 추가하려면 <strong>"연락처 추가"</strong> 버튼 클릭</p>
+                      <p>여러 연락처를 추가하려면 <strong>&quot;연락처 추가&quot;</strong> 버튼 클릭</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-purple-600 min-w-[20px]">④</span>
@@ -190,7 +190,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-purple-600 min-w-[20px]">⑤</span>
-                      <p><strong>"vCard 다운로드"</strong> 또는 <strong>"QR 코드 다운로드"</strong> 버튼으로 저장</p>
+                      <p><strong>&quot;vCard 다운로드&quot;</strong> 또는 <strong>&quot;QR 코드 다운로드&quot;</strong> 버튼으로 저장</p>
                     </div>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-orange-600 min-w-[20px]">②</span>
-                      <p><strong>네이밍 템플릿:</strong> 연락처 이름을 일괄 변경 (예: "이름 (회사)", "회사 - 이름" 등)</p>
+                      <p><strong>네이밍 템플릿:</strong> 연락처 이름을 일괄 변경 (예: &quot;이름 (회사)&quot;, &quot;회사 - 이름&quot; 등)</p>
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-orange-600 min-w-[20px]">③</span>
@@ -220,7 +220,7 @@ export default function HeroSection({ onNavigateToInput }: HeroSectionProps) {
                     </div>
                     <div className="flex gap-2">
                       <span className="font-bold text-orange-600 min-w-[20px]">⑤</span>
-                      <p>수정 완료 후 <strong>"적용"</strong> 버튼으로 변경사항 저장</p>
+                      <p>수정 완료 후 <strong>&quot;적용&quot;</strong> 버튼으로 변경사항 저장</p>
                     </div>
                   </div>
                 </div>

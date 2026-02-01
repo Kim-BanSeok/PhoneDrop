@@ -312,11 +312,11 @@ export default function ManualEntrySection({ onContactsUpdate }: ManualEntrySect
             </div>
             <div className="flex gap-2">
               <span className="font-bold text-blue-600">02</span>
-              <p>여러 명 추가하려면 '연락처 추가' 클릭</p>
+              <p>여러 명 추가하려면 &apos;연락처 추가&apos; 클릭</p>
             </div>
             <div className="flex gap-2">
               <span className="font-bold text-blue-600">03</span>
-              <p>'vCard 다운로드'로 파일을 저장하세요</p>
+              <p>&apos;vCard 다운로드&apos;로 파일을 저장하세요</p>
             </div>
             <div className="flex gap-2">
               <span className="font-bold text-blue-600">04</span>
