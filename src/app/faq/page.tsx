@@ -112,16 +112,19 @@ export default function FAQPage() {
             <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 문제가 발생했을 때 어떻게 하나요?</h3>
             <p className="text-slate-600 leading-relaxed">
               A: 먼저 브라우저를 새로고침하고, 캐시를 삭제해보세요. 
-              문제가 지속되면 support@phonedrop.app로 문의해 주세요.
+              문제가 지속되면 FAQ 페이지에서 해결책을 찾아보세요.
+            </p>
+          </div>
+
+          <div className="border-b border-slate-200 pb-8">
+            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 추가로 궁금한 점이 있으면 어떻게 하나요?</h3>
+            <p className="text-slate-600 leading-relaxed">
+              A: FAQ 페이지에서 자주 묻는 질문을 확인해 보시거나, 
+              사용 가이드를 참고해 주세요.
             </p>
           </div>
 
           <div className="pt-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 추가로 궁금한 점이 있으면 어떻게 하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 이메일(support@phonedrop.app)이나 홈페이지를 통해 문의해 주시면 
-              빠르게 답변해 드리겠습니다.
-            </p>
           </div>
         </div>
       </div>

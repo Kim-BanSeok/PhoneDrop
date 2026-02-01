@@ -129,10 +129,9 @@ export default function GuidePage() {
           <section>
             <h2 className="text-2xl font-semibold text-slate-900 mb-4">🆘 문의 및 지원</h2>
             <p className="text-slate-600 leading-relaxed">
-              사용 중 문제가 있거나 궁금한 점이 있으시면 다음 연락처로 문의해 주세요:
+              사용 중 문제가 있거나 궁금한 점이 있으시면 FAQ 페이지나 사용 가이드를 참고해 주세요.
             </p>
             <div className="bg-slate-50 p-4 rounded-lg">
-              <p className="text-slate-700">이메일: support@phonedrop.app</p>
               <p className="text-slate-700">홈페이지: https://phonedrop.app</p>
             </div>
           </section>

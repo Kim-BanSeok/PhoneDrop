@@ -13,6 +13,9 @@ export default function TermsOfService() {
         
         <div className="prose prose-slate max-w-none space-y-8">
           <section>
+            <div className="bg-slate-50 p-4 rounded-lg">
+              <p className="text-slate-700">홈페이지: https://phonedrop.app</p>
+            </div>
             <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. 서비스의 목적</h2>
             <p className="text-slate-600 leading-relaxed">
               PhoneDrop은 사용자가 PC에서 연락처 정보를 입력하여 vCard(.vcf) 파일을 생성하고,

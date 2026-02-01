@@ -130,15 +130,15 @@ export default function NewsPage() {
               </div>
               
               <div className="border border-slate-200 rounded-lg p-6">
-                <h3 className="font-semibold text-slate-900 mb-3">문의하기</h3>
+                <h3 className="font-semibold text-slate-900 mb-3">자가 해결</h3>
                 <p className="text-slate-600 mb-3">
-                  기능 제안, 버그 신고, 기타 문의사항이 있으시면 언제든지 연락주세요.
+                  문제가 있으시면 FAQ 페이지나 사용 가이드를 참고해 주세요.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/faq" 
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
                 >
-                  문의 페이지로 이동
+                  FAQ 페이지로 이동
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
