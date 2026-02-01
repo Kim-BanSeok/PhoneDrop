@@ -35,12 +35,10 @@ export default function TabNavigation({ contacts, onContactsUpdate }: TabNavigat
 
   // 탭 변경 시 스크롤을 상단으로 이동
   const handleTabChange = (value: string) => {
-    if (value) {
-      setActiveTab(value)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      // URL hash 업데이트
-      window.history.replaceState(null, '', `#${value}`)
-    }
+    setActiveTab(value)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // URL hash 업데이트
+    window.history.replaceState(null, '', `#${value}`)
   }
 
   return (
