@@ -56,12 +56,6 @@ export default function NewsPage() {
                   영어, 일본어, 중국어 등 다국어 인터페이스 지원을 계획 중입니다.
                 </p>
               </div>
-              <div className="border-l-4 border-purple-400 pl-4">
-                <h3 className="font-semibold text-slate-900">📱 모바일 앱</h3>
-                <p className="text-slate-600 text-sm mt-1">
-                  iOS 및 Android 네이티브 앱 출시를 준비 중입니다.
-                </p>
-              </div>
             </div>
           </div>
 
