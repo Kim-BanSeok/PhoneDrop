@@ -1,4 +1,4 @@
-import { Phone, Share, Mail } from 'lucide-react'
+import { Phone, Share } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -25,24 +25,7 @@ export default function Footer() {
               >
                 <Share className="w-5 h-5" />
               </a>
-              <a 
-                className="hover:text-white transition-colors" 
-                href="mailto:support@phonedrop.app"
-                title="이메일"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-6">빠른 링크</h4>
-            <ul className="space-y-4 text-sm">
-              <li><a className="hover:text-white transition-colors" href="#features">기능 소개</a></li>
-              <li><a className="hover:text-white transition-colors" href="#bulk-upload">대량 업로드</a></li>
-              <li><a className="hover:text-white transition-colors" href="#manual-entry">직접 입력</a></li>
-              <li><a className="hover:text-white transition-colors" href="#smart-input">스마트 입력</a></li>
-            </ul>
           </div>
 
           <div>
@@ -50,7 +33,6 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li><a className="hover:text-white transition-colors" href="/guide">사용 방법</a></li>
               <li><a className="hover:text-white transition-colors" href="/faq">자주 묻는 질문</a></li>
-              <li><a className="hover:text-white transition-colors" href="/contact">문의하기</a></li>
               <li><a className="hover:text-white transition-colors" href="/news">업데이트 소식</a></li>
             </ul>
           </div>
