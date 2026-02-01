@@ -16,10 +16,20 @@ export default function Footer() {
               전화번호를 한 번에 저장하세요. PC에서 연락처를 입력하여 vCard 파일을 생성하고, 모바일에서 바로 저장하는 가장 쉬운 방법입니다.
             </p>
             <div className="flex gap-4">
-              <a className="hover:text-white transition-colors" href="#">
+              <a 
+                className="hover:text-white transition-colors" 
+                href="https://github.com/Kim-BanSeok/PhoneDrop" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="GitHub"
+              >
                 <Share className="w-5 h-5" />
               </a>
-              <a className="hover:text-white transition-colors" href="#">
+              <a 
+                className="hover:text-white transition-colors" 
+                href="mailto:support@phonedrop.app"
+                title="이메일"
+              >
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -31,26 +41,26 @@ export default function Footer() {
               <li><a className="hover:text-white transition-colors" href="#features">기능 소개</a></li>
               <li><a className="hover:text-white transition-colors" href="#bulk-upload">대량 업로드</a></li>
               <li><a className="hover:text-white transition-colors" href="#manual-entry">직접 입력</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">vCard 템플릿</a></li>
+              <li><a className="hover:text-white transition-colors" href="#smart-input">스마트 입력</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold mb-6">지원</h4>
             <ul className="space-y-4 text-sm">
-              <li><a className="hover:text-white transition-colors" href="#">사용 방법</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">자주 묻는 질문</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">문의하기</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">업데이트 소식</a></li>
+              <li><a className="hover:text-white transition-colors" href="/guide">사용 방법</a></li>
+              <li><a className="hover:text-white transition-colors" href="/faq">자주 묻는 질문</a></li>
+              <li><a className="hover:text-white transition-colors" href="/contact">문의하기</a></li>
+              <li><a className="hover:text-white transition-colors" href="https://github.com/Kim-BanSeok/PhoneDrop/releases" target="_blank" rel="noopener noreferrer">업데이트 소식</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold mb-6">법적 고지</h4>
             <ul className="space-y-4 text-sm">
-              <li><a className="hover:text-white transition-colors" href="#">개인정보처리방침</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">이용약관</a></li>
-              <li><a className="hover:text-white transition-colors" href="#">쿠키 정책</a></li>
+              <li><a className="hover:text-white transition-colors" href="/privacy">개인정보처리방침</a></li>
+              <li><a className="hover:text-white transition-colors" href="/terms">이용약관</a></li>
+              <li><a className="hover:text-white transition-colors" href="/privacy#쿠키-정책">쿠키 정책</a></li>
             </ul>
           </div>
         </div>
@@ -58,8 +68,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p>© 2024 PhoneDrop. All rights reserved.</p>
           <div className="flex gap-6">
-            <a className="hover:text-white" href="#">개인정보처리방침</a>
-            <a className="hover:text-white" href="#">이용약관</a>
+            <a className="hover:text-white" href="/privacy">개인정보처리방침</a>
+            <a className="hover:text-white" href="/terms">이용약관</a>
           </div>
         </div>
       </div>
