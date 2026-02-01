@@ -184,14 +184,17 @@ export default function DigitalCardSection({ contacts }: DigitalCardSectionProps
                     </SelectTrigger>
                     <SelectContent>
                       {Object.entries(cardTemplates).map(([key, template]) => (
-                        <SelectItem key={key} value={key}>
+                        <SelectItem key={key} value={key} disabled={key === 'ai'}>
                           <div className="flex items-center gap-2">
                             <div 
                               className="w-4 h-4 rounded" 
                               style={{ backgroundColor: template.colors[0] }}
                             />
                             <div>
-                              <div className="font-medium">{template.name}</div>
+                              <div className="font-medium">
+                                {template.name}
+                                {key === 'ai' && ' (준비 중)'}
+                              </div>
                               <div className="text-sm text-slate-500">{template.description}</div>
                             </div>
                           </div>
@@ -220,35 +223,33 @@ export default function DigitalCardSection({ contacts }: DigitalCardSectionProps
                 )}
                 {selectedTemplate === 'ai' && selectedContact && (
                   <>
-                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
+                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4 opacity-50">
                       <div className="flex items-start gap-2">
                         <span className="text-2xl">🤖</span>
                         <div className="flex-1">
-                          <p className="text-sm font-semibold text-purple-900 mb-1">AI 디자인 추천</p>
+                          <p className="text-sm font-semibold text-purple-900 mb-1">AI 디자인 추천 (후개발 예정)</p>
                           <p className="text-xs text-purple-700">
-                            {generateDesignDescription(recommendCardDesign(selectedContact), selectedContact)}
+                            AI가 연락처 정보를 분석하여 최적의 명함 디자인을 추천해드립니다.
                           </p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-blue-50 border border-blue-200 rounded-lg opacity-50">
                       <div className="flex items-center gap-3 flex-1">
                         <Sparkles className="w-5 h-5 text-blue-600 flex-shrink-0" />
                         <div className="flex-1">
                           <Label className="text-sm font-semibold text-blue-900 cursor-pointer block">
-                            AI가 명함 전체 생성
+                            AI가 명함 전체 생성 (준비 중)
                           </Label>
                           <p className="text-xs text-blue-700 mt-1">
-                            {aiFullCard 
-                              ? 'AI가 배경과 텍스트를 모두 생성합니다 (더 자연스러움)' 
-                              : 'AI가 배경만 생성하고 텍스트는 오버레이합니다'}
+                            AI가 배경과 텍스트를 모두 생성하여 더 자연스러운 명함을 만들어줍니다.
                           </p>
                         </div>
                       </div>
                       <Switch
-                        checked={aiFullCard}
-                        onCheckedChange={setAiFullCard}
+                        checked={false}
+                        disabled={true}
                         className="flex-shrink-0"
                       />
                     </div>
