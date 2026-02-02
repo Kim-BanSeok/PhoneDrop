@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'PhoneDrop - 스마트한 연락처 저장 솔루션',
   description: 'PC에서 전화번호를 입력하거나 대량으로 정리하여 휴대폰 주소록에 바로 저장 가능한 vCard 파일을 생성해드립니다.',
+  verification: {
+    google: 'lSJTeWuV8EZQIBkHAfSRPQlK59uyaYjsnYH_DhIv2r4',
+  },
   other: {
-    'google-adsense-account': 'ca-pub-7373977880685678',
-    // Google Search Console 검증 코드
-    'google-site-verification': 'lSJTeWuV8EZQIBkHAfSRPQlK59uyaYjsnYH_DhIv2r4',
-    // 네이버 서치어드바이저 검증 코드
     'naver-site-verification': '8d0c723eeac04b6aaed0b94c2212551da61f0ae4',
+    'google-adsense-account': 'ca-pub-7373977880685678',
   },
 }
 
