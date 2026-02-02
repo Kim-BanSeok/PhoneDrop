@@ -47,7 +47,6 @@ export const metadata: Metadata = {
   },
   other: {
     'naver-site-verification': '8d0c723eeac04b6aaed0b94c2212551da61f0ae4',
-    'google-adsense-account': 'ca-pub-7373977880685678',
   },
 }
 
@@ -82,6 +81,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="scroll-smooth">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-7373977880685678" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
