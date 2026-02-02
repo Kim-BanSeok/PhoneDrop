@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     // Google Search Console 검증 코드
     'google-site-verification': 'lSJTeWuV8EZQIBkHAfSRPQlK59uyaYjsnYH_DhIv2r4',
     // 네이버 서치어드바이저 검증 코드
-    'naver-site-verification': 'bd52bdc3dcad95af57f1a72179ff4150e28deec5',
+    'naver-site-verification': '8d0c723eeac04b6aaed0b94c2212551da61f0ae4',
   },
 }
 
