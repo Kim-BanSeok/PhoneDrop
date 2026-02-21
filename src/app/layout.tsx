@@ -6,8 +6,8 @@ import { Toaster } from '@/components/ui/toaster'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'PhoneDrop - 연락처 vCard 생성기',
-  description: 'PC에서 연락처를 스마트하게 입력하고 QR 코드로 공유하세요. 대량 연락처도 한 번에 휴대폰에 저장 가능합니다.',
+  title: 'PhoneDrop - 스마트한 연락처 저장 솔루션',
+  description: 'PC에서 전화번호를 입력하거나 대량으로 정리하여 휴대폰 주소록에 바로 저장 가능한 vCard 파일을 생성해드립니다.',
   keywords: [
     '전화번호 저장',
     '연락처 저장',
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     '연락처 변환',
   ],
   openGraph: {
-    title: 'PhoneDrop - 연락처 vCard 생성기',
-    description: 'PC에서 연락처를 스마트하게 입력하고 QR 코드로 공유하세요. 대량 연락처도 한 번에 휴대폰에 저장 가능합니다.',
+    title: 'PhoneDrop - 전화번호를 한 번에 저장하세요',
+    description: 'PC에서 전화번호를 입력하거나 대량으로 정리하여 휴대폰 주소록에 바로 저장 가능한 vCard 파일을 생성해드립니다.',
     type: 'website',
     locale: 'ko_KR',
     siteName: 'PhoneDrop',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PhoneDrop - 연락처 vCard 생성기',
-    description: 'PC에서 연락처를 스마트하게 입력하고 QR 코드로 공유하세요.',
+    title: 'PhoneDrop - 스마트한 연락처 저장 솔루션',
+    description: 'PC에서 전화번호를 입력하여 휴대폰 주소록에 바로 저장하세요.',
   },
   verification: {
     google: 'lSJTeWuV8EZQIBkHAfSRPQlK59uyaYjsnYH_DhIv2r4',
@@ -59,7 +59,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'PhoneDrop',
-    description: 'PC에서 연락처를 스마트하게 입력하고 QR 코드로 공유하세요. 대량 연락처도 한 번에 휴대폰에 저장 가능합니다.',
+    description: 'PC에서 전화번호를 입력하거나 대량으로 정리하여 휴대폰 주소록에 바로 저장 가능한 vCard 파일을 생성해드립니다.',
     url: 'https://phone-drop.vercel.app',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Web',
