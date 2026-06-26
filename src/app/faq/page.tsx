@@ -1,133 +1,75 @@
-import { Metadata } from 'next'
+import Link from 'next/link'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '자주 묻는 질문 | PhoneDrop',
-  description: 'PhoneDrop 사용에 관한 자주 묻는 질문 및 답변',
+  description: 'vCard, QR 코드, CSV 가져오기, 개인정보 처리에 대한 PhoneDrop FAQ입니다.',
 }
+
+const faqs = [
+  {
+    q: 'PhoneDrop은 어떤 용도인가요?',
+    a: '연락처를 정리하고 vCard(.vcf) 파일이나 QR 코드로 내보내는 도구입니다. 명함 관리, 주소록 이전, 행사 명단 정리에 적합합니다.',
+  },
+  {
+    q: 'CSV나 Excel 파일도 불러올 수 있나요?',
+    a: '가능합니다. 표 형태 데이터에서 이름, 전화번호, 이메일, 회사명 같은 열을 매핑해 가져오는 흐름을 지원합니다.',
+  },
+  {
+    q: 'vCard 파일은 무엇인가요?',
+    a: '대부분의 휴대폰과 주소록 앱에서 읽을 수 있는 표준 연락처 파일 형식입니다.',
+  },
+  {
+    q: 'QR 코드는 언제 쓰면 좋나요?',
+    a: '파일 전송이 번거로운 현장이나, 상대방이 바로 휴대폰으로 저장해야 하는 상황에서 유용합니다.',
+  },
+  {
+    q: '중복 연락처는 어떻게 처리하나요?',
+    a: '이름과 전화번호를 기준으로 중복 가능성을 확인하고, 사용자가 삭제 또는 병합할 수 있도록 돕습니다.',
+  },
+  {
+    q: '개인정보는 서버에 저장되나요?',
+    a: '기본적인 입력과 정리 작업은 브라우저에서 처리되도록 설계되어 있습니다. 일부 외부 API 기능을 사용할 때만 별도 요청이 생길 수 있습니다.',
+  },
+  {
+    q: '모바일에서도 열 수 있나요?',
+    a: '네. iPhone과 Android 모두에서 열 수 있는 형식으로 내보내기를 지원합니다.',
+  },
+  {
+    q: '문제가 생기면 어디를 보면 되나요?',
+    a: '먼저 FAQ와 사용 가이드를 확인하고, 그래도 해결되지 않으면 입력 형식과 브라우저 호환성을 점검하는 것이 좋습니다.',
+  },
+]
 
 export default function FAQPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-slate-900 mb-8">자주 묻는 질문</h1>
-        
-        <div className="space-y-8">
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: PhoneDrop은 어떤 서비스인가요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: PhoneDrop은 PC에서 연락처 정보를 입력하여 vCard(.vcf) 파일을 생성하고, 
-              모바일 기기에서 쉽게 저장할 수 있도록 하는 웹 기반 서비스입니다.
-            </p>
-          </div>
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-16">
+        <div className="mb-12">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">FAQ</p>
+          <h1 className="mt-3 text-4xl font-black text-slate-950 md:text-5xl">자주 묻는 질문</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+            처음 쓰는 사용자가 헷갈릴 만한 내용을 모았습니다. 입력 방식, 파일 형식, 개인정보 처리 방침까지 빠르게 확인할 수
+            있습니다.
+          </p>
+        </div>
 
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 개인정보는 안전한가요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 네, 모든 데이터 처리는 사용자의 브라우저에서만 이루어집니다. 
-              서버에는 어떠한 개인정보도 저장되지 않으며, 브라우저를 닫으면 모든 정보가 즉시 삭제됩니다.
-            </p>
-          </div>
+        <div className="space-y-5">
+          {faqs.map((faq) => (
+            <article key={faq.q} className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+              <h2 className="text-xl font-bold text-slate-950">{faq.q}</h2>
+              <p className="mt-3 leading-relaxed text-slate-600">{faq.a}</p>
+            </article>
+          ))}
+        </div>
 
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 어떤 파일 형식을 지원하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: CSV, Excel 파일을 직접 업로드할 수 있으며, 텍스트 형태로 복사한 내용도 
-              스마트 입력 기능으로 자동 인식할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: vCard 파일이란 무엇인가요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: vCard(.vcf)는 전자명함 표준 파일 형식으로, 대부분의 스마트폰과 
-              주소록 애플리케이션에서 지원합니다. 파일을 열기만 하면 자동으로 연락처를 추가할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: QR 코드는 어떻게 사용하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 생성된 QR 코드를 모바일 카메라로 스캔하면 vCard 파일을 다운로드할 수 있는 링크가 나타납니다. 
-              링크를 클릭하면 자동으로 연락처를 추가할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 한 번에 몇 개의 연락처를 처리할 수 있나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 기술적으로는 수백 개의 연락처도 처리 가능합니다. 
-              하지만 브라우저 성능에 따라 제한될 수 있으며, 대용량의 경우 여러 번에 나누어 처리하는 것을 권장합니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 중복된 연락처는 어떻게 처리하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 관리 탭의 &apos;중복 처리&apos; 기능을 통해 동일한 전화번호나 이름의 연락처를 
-              자동으로 감지하고 병합하거나 삭제할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: iPhone에서도 사용할 수 있나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 네, iPhone과 Android 모두 지원합니다. vCard 파일은 iOS와 Android 모두에서 
-              표준으로 지원하는 형식입니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 서비스 비용은 어떻게 되나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: PhoneDrop의 기본 기능은 무료로 제공됩니다. 
-              향후 유료 기능이 추가될 수 있지만, 현재 모든 기능은 무료로 이용할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 오프라인에서도 사용할 수 있나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 기본적인 연락처 입력과 vCard 생성은 오프라인에서도 가능합니다. 
-              하지만 QR 코드 생성이나 일부 고급 기능은 인터넷 연결이 필요할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 생성된 파일은 어디에 저장되나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 파일은 사용자의 기기 다운로드 폴더에 저장됩니다. 
-              서버에는 저장되지 않으므로 안심하셔도 됩니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 지원하는 브라우저는 무엇인가요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: Chrome, Edge, Safari, Firefox 등 모든 최신 브라우저에서 지원됩니다. 
-              최신 버전의 브라우저 사용을 권장합니다.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 문제가 발생했을 때 어떻게 하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: 먼저 브라우저를 새로고침하고, 캐시를 삭제해보세요. 
-              문제가 지속되면 FAQ 페이지에서 해결책을 찾아보세요.
-            </p>
-          </div>
-
-          <div className="border-b border-slate-200 pb-8">
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Q: 추가로 궁금한 점이 있으면 어떻게 하나요?</h3>
-            <p className="text-slate-600 leading-relaxed">
-              A: FAQ 페이지에서 자주 묻는 질문을 확인해 보시거나, 
-              사용 가이드를 참고해 주세요.
-            </p>
-          </div>
-
-          <div className="pt-8">
-          </div>
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link className="text-blue-700 hover:underline" href="/">홈</Link>
+          <Link className="text-blue-700 hover:underline" href="/guide">사용 가이드</Link>
+          <Link className="text-blue-700 hover:underline" href="/news">업데이트 노트</Link>
+          <Link className="text-blue-700 hover:underline" href="/privacy">개인정보처리방침</Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 }

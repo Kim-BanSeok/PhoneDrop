@@ -1,142 +1,98 @@
-import { Metadata } from 'next'
+import Link from 'next/link'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '사용 방법 | PhoneDrop',
-  description: 'PhoneDrop의 상세 사용 가이드 및 튜토리얼',
+  title: '사용 가이드 | PhoneDrop',
+  description: 'PhoneDrop의 입력, 정리, 내보내기 과정을 단계별로 안내하는 페이지입니다.',
 }
+
+const steps = [
+  {
+    title: '1. 연락처를 입력합니다',
+    body: '텍스트를 붙여 넣거나 CSV·Excel 파일을 불러오거나, 직접 한 줄씩 입력할 수 있습니다.',
+  },
+  {
+    title: '2. 형식을 정리합니다',
+    body: '전화번호 표기, 이메일 형식, 이름 중복을 점검하고 저장 전에 필요한 수정을 합니다.',
+  },
+  {
+    title: '3. 내보내기 방식을 고릅니다',
+    body: 'vCard(.vcf)는 주소록 앱으로 가져오기 좋고, QR 코드는 현장에서 빠르게 공유하기 좋습니다.',
+  },
+  {
+    title: '4. 모바일에서 확인합니다',
+    body: '내보낸 파일을 iPhone 또는 Android에서 열어 최종 결과를 확인합니다.',
+  },
+]
+
+const tips = [
+  '한 줄에 하나씩 적으면 대량 정리가 쉬워집니다.',
+  '회사명과 직함이 있다면 함께 적어두면 검색이 편합니다.',
+  '같은 사람의 연락처가 여러 개면 정리 단계에서 먼저 합치는 편이 좋습니다.',
+  '번호 형식은 가능한 한 국내 표준 또는 국제 표준으로 맞추는 것이 좋습니다.',
+]
 
 export default function GuidePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-slate-900 mb-8">PhoneDrop 사용 방법</h1>
-        
-        <div className="prose prose-slate max-w-none space-y-8">
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">🚀 시작하기</h2>
-            <p className="text-slate-600 leading-relaxed">
-              PhoneDrop은 PC에서 연락처를 입력하여 모바일에서 쉽게 저장할 수 있는 웹 서비스입니다.
-              다음 단계를 따라 쉽게 시작해보세요.
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-16">
+        <div className="mb-12">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">Guide</p>
+          <h1 className="mt-3 text-4xl font-black text-slate-950 md:text-5xl">PhoneDrop 사용 가이드</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+            이 페이지는 PhoneDrop의 실제 사용 흐름을 설명합니다. 입력 방식, 정리 방법, 파일 내보내기, 모바일 확인 순서로 보면
+            바로 익힐 수 있습니다.
+          </p>
+        </div>
+
+        <section className="grid gap-6 md:grid-cols-2">
+          {steps.map((step) => (
+            <article key={step.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+              <h2 className="text-xl font-bold text-slate-950">{step.title}</h2>
+              <p className="mt-3 leading-relaxed text-slate-600">{step.body}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="mt-12 rounded-3xl border border-blue-100 bg-blue-50 p-8">
+          <h2 className="text-2xl font-bold text-slate-950">입력 팁</h2>
+          <ul className="mt-5 space-y-3 text-slate-700">
+            {tips.map((tip) => (
+              <li key={tip} className="flex gap-3">
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-12 grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <article className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-slate-950">권장 작업 순서</h2>
+            <ol className="mt-5 space-y-3 text-slate-600">
+              <li>1. 복사한 연락처를 붙여 넣는다.</li>
+              <li>2. 중복이나 오탈자를 수정한다.</li>
+              <li>3. vCard 또는 QR 코드로 내보낸다.</li>
+              <li>4. 모바일에서 열어 최종 확인한다.</li>
+            </ol>
+          </article>
+
+          <article className="rounded-3xl border border-slate-200 bg-slate-950 p-8 text-white">
+            <h2 className="text-2xl font-bold">이 페이지가 주는 정보</h2>
+            <p className="mt-5 leading-relaxed text-slate-300">
+              PhoneDrop은 단순 다운로드 페이지가 아니라, 연락처를 사람이 읽을 수 있는 형태로 정리하고 다시 사용할 수 있는
+              파일로 바꾸는 도구입니다.
             </p>
-          </section>
+          </article>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">📝 연락처 입력 방법</h2>
-            
-            <div className="space-y-6">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">1. 스마트 입력 (AI 자동 인식)</h3>
-                <ol className="list-decimal pl-6 text-blue-800 space-y-2">
-                  <li>입력 탭에서 &quot;🤖 PhoneDrop 스마트 입력기&quot; 섹션으로 이동</li>
-                  <li>텍스트 입력란에 연락처 정보 붙여넣기 (엑셀, 카톡, 이메일 등)</li>
-                  <li>AI가 자동으로 이름, 전화번호, 이메일 등을 분리</li>
-                  <li>인식 결과 확인 후 &quot;연락처 추가&quot; 버튼 클릭</li>
-                </ol>
-              </div>
-
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-3">2. 대량 업로드 (CSV/Excel)</h3>
-                <ol className="list-decimal pl-6 text-green-800 space-y-2">
-                  <li>&quot;대량 연락처 업로드&quot; 섹션에서 템플릿 다운로드</li>
-                  <li>다운로드한 템플릿 파일에 연락처 정보 입력</li>
-                  <li>파일 선택 버튼으로 업로드</li>
-                  <li>변환된 연락처 확인 및 추가</li>
-                </ol>
-              </div>
-
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-3">3. 직접 입력</h3>
-                <ol className="list-decimal pl-6 text-purple-800 space-y-2">
-                  <li>&quot;직접 입력&quot; 섹션에서 폼에 정보 입력</li>
-                  <li>이름, 전화번호는 필수, 나머지는 선택</li>
-                  <li>&quot;연락처 추가&quot; 버튼으로 목록에 추가</li>
-                  <li>여러 연락처를 계속 입력 가능</li>
-                </ol>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">🔧 연락처 관리</h2>
-            
-            <div className="space-y-4">
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-orange-900 mb-3">관리 탭 기능</h3>
-                <ul className="list-disc pl-6 text-orange-800 space-y-2">
-                  <li><strong>네이밍 템플릿:</strong> 연락처 이름을 일괄 변경</li>
-                  <li><strong>중복 처리:</strong> 동일 연락처 자동 감지 및 병합</li>
-                  <li><strong>오류 수정:</strong> 전화번호/이메일 형식 자동 수정</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">📤 내보내기 및 공유</h2>
-            
-            <div className="space-y-4">
-              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-indigo-900 mb-3">내보내기 탭 옵션</h3>
-                <ul className="list-disc pl-6 text-indigo-800 space-y-2">
-                  <li><strong>vCard 파일:</strong> 표준 .vcf 파일로 다운로드</li>
-                  <li><strong>QR 코드:</strong> 스캔하여 바로 저장</li>
-                  <li><strong>디지털 명함:</strong> 개별 연락처 명함 생성</li>
-                  <li><strong>프로필 페이지:</strong> 웹 페이지 형태로 공유</li>
-                  <li><strong>연락처 패키지:</strong> 여러 연락처를 하나로 묶기</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">📱 모바일에서 저장하기</h2>
-            
-            <div className="space-y-4">
-              <div className="bg-pink-50 border border-pink-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-pink-900 mb-3">저장 방법</h3>
-                <div className="space-y-3">
-                  <div>
-                    <strong>방법 1: vCard 파일</strong>
-                    <p className="text-pink-800 mt-1">다운로드한 .vcf 파일을 모바일로 전송 후 열기 → 자동으로 주소록에 추가</p>
-                  </div>
-                  <div>
-                    <strong>방법 2: QR 코드</strong>
-                    <p className="text-pink-800 mt-1">PC 화면의 QR 코드를 모바일 카메라로 스캔 → 연락처 저장</p>
-                  </div>
-                  <div>
-                    <strong>방법 3: 이메일/메신저</strong>
-                    <p className="text-pink-800 mt-1">vCard 파일을 본인에게 전송 후 모바일에서 열기</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">💡 유용한 팁</h2>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
-              <ul className="list-disc pl-6 text-blue-900 space-y-2">
-                <li><strong>전화번호 자동 정규화:</strong> 01012345678 → 010-1234-5678로 자동 변환</li>
-                <li><strong>다양한 형식 지원:</strong> 엑셀, 카톡, 이메일 등 어디서든 복사한 내용 그대로 사용</li>
-                <li><strong>실시간 검증:</strong> 전화번호와 이메일 형식을 실시간으로 검사</li>
-                <li><strong>대량 처리:</strong> 수백 개의 연락처도 한 번에 처리 가능</li>
-                <li><strong>개인정보 보호:</strong> 모든 처리는 브라우저에서만 이루어짐</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-slate-900 mb-4">🆘 문의 및 지원</h2>
-            <p className="text-slate-600 leading-relaxed">
-              사용 중 문제가 있거나 궁금한 점이 있으시면 FAQ 페이지나 사용 가이드를 참고해 주세요.
-            </p>
-            <div className="bg-slate-50 p-4 rounded-lg">
-              <p className="text-slate-700">홈페이지: https://phone-drop.vercel.app</p>
-            </div>
-          </section>
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link className="text-blue-700 hover:underline" href="/">홈</Link>
+          <Link className="text-blue-700 hover:underline" href="/faq">FAQ</Link>
+          <Link className="text-blue-700 hover:underline" href="/news">업데이트 노트</Link>
+          <Link className="text-blue-700 hover:underline" href="/privacy">개인정보처리방침</Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 }

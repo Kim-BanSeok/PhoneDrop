@@ -1,86 +1,67 @@
-import { Metadata } from 'next'
+import Link from 'next/link'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '업데이트 소식 | PhoneDrop',
-  description: 'PhoneDrop의 최신 업데이트 및 새로운 기능 소식',
+  title: '업데이트 노트 | PhoneDrop',
+  description: 'PhoneDrop의 최근 개선 사항과 향후 계획을 확인할 수 있는 업데이트 페이지입니다.',
 }
+
+const updates = [
+  {
+    date: '2026-06-26',
+    title: '콘텐츠 허브와 안내 페이지 보강',
+    body: '가이드, FAQ, 개인정보처리방침, 이용약관 페이지를 정리하고 홈 화면에 정보성 링크를 추가했습니다.',
+  },
+  {
+    date: '2026-06-26',
+    title: '심사용 콘텐츠 구조 개선',
+    body: '도구 중심 화면에도 사용법과 실제 활용 예시를 함께 보여주도록 섹션을 재배치했습니다.',
+  },
+  {
+    date: '2026-06-26',
+    title: '정보 페이지 가독성 개선',
+    body: '깨진 문구를 정리하고, 한국어로 바로 읽을 수 있는 문장 구조로 다시 작성했습니다.',
+  },
+]
 
 export default function NewsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-slate-900 mb-8">업데이트 소식</h1>
-        
-        <div className="space-y-8">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-8">
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                <span className="text-sm font-bold">NEW</span>
-              </div>
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-slate-900 mb-2">PhoneDrop v1.0 정식 출시!</h2>
-                <p className="text-slate-600 mb-4">2024년 2월 2일</p>
-                <div className="prose prose-slate max-w-none">
-                  <p className="text-slate-700 leading-relaxed">
-                    드디어 PhoneDrop v1.0이 정식으로 출시되었습니다! 
-                    PC에서 연락처를 입력하여 모바일에서 쉽게 저장할 수 있는 혁신적인 서비스를 지금 바로 경험해보세요.
-                  </p>
-                  <h3 className="text-lg font-semibold text-slate-900 mt-4 mb-2">주요 기능</h3>
-                  <ul className="list-disc pl-6 text-slate-700 space-y-1">
-                    <li>🤖 AI 스마트 입력으로 연락처 자동 인식</li>
-                    <li>📊 대량 업로드 (CSV, Excel) 지원</li>
-                    <li>🎴 디지털 명함 생성</li>
-                    <li>📱 QR 코드로 즉시 저장</li>
-                    <li>🔗 프로필 페이지 공유</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-16">
+        <div className="mb-12">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">Updates</p>
+          <h1 className="mt-3 text-4xl font-black text-slate-950 md:text-5xl">업데이트 노트</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+            최근 바뀐 내용과 앞으로의 개선 방향을 요약합니다. 사용자가 사이트의 상태를 이해하는 데 도움이 되도록 유지합니다.
+          </p>
+        </div>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-2 h-2 bg-slate-400 rounded-full"></div>
-              <h2 className="text-xl font-bold text-slate-900">준비 중인 기능</h2>
-            </div>
-            <div className="space-y-4">
-              <div className="border-l-4 border-blue-400 pl-4">
-                <h3 className="font-semibold text-slate-900">🤖 AI 디지털 명함 디자인</h3>
-                <p className="text-slate-600 text-sm mt-1">
-                  AI가 연락처 정보를 분석하여 최적의 명함 디자인을 추천해주는 기능을 준비 중입니다.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-400 pl-4">
-                <h3 className="font-semibold text-slate-900">🌐 다국어 지원</h3>
-                <p className="text-slate-600 text-sm mt-1">
-                  영어, 일본어, 중국어 등 다국어 인터페이스 지원을 계획 중입니다.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="space-y-5">
+          {updates.map((update) => (
+            <article key={update.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+              <p className="text-sm font-semibold text-blue-600">{update.date}</p>
+              <h2 className="mt-2 text-2xl font-bold text-slate-950">{update.title}</h2>
+              <p className="mt-3 leading-relaxed text-slate-600">{update.body}</p>
+            </article>
+          ))}
+        </div>
 
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-              <h2 className="text-xl font-bold text-slate-900">최근 개선 사항</h2>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-green-600 font-medium">2024.02.02</span>
-                <span className="text-slate-700">Footer 링크 모두 활성화 및 법적 고지 페이지 추가</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-green-600 font-medium">2024.02.02</span>
-                <span className="text-slate-700">AI 템플릿 기능 안정화 및 사용자 경험 개선</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-green-600 font-medium">2024.02.02</span>
-                <span className="text-slate-700">탭 네비게이션 중복 문제 해결</span>
-              </div>
-            </div>
-          </div>
+        <section className="mt-12 rounded-3xl border border-emerald-100 bg-emerald-50 p-8">
+          <h2 className="text-2xl font-bold text-slate-950">다음 개선 방향</h2>
+          <ul className="mt-5 space-y-3 text-slate-700">
+            <li>· 더 많은 입력 예시와 샘플 데이터를 추가</li>
+            <li>· 중복 정리와 필드 매핑 가이드를 보강</li>
+            <li>· 모바일 저장 절차를 별도 짧은 튜토리얼로 분리</li>
+          </ul>
+        </section>
+
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link className="text-blue-700 hover:underline" href="/">홈</Link>
+          <Link className="text-blue-700 hover:underline" href="/guide">사용 가이드</Link>
+          <Link className="text-blue-700 hover:underline" href="/faq">FAQ</Link>
+          <Link className="text-blue-700 hover:underline" href="/privacy">개인정보처리방침</Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
